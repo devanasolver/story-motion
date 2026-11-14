@@ -18,6 +18,8 @@ A 30-second example of a video made in the Story Motion style:
 
 Made by Anas. More on YouTube: **[Anas | Build Online](https://www.youtube.com/@anasstyb)**
 
+Style inspired by [Payton Bilodeau](https://www.youtube.com/@paytonbilodeau) and his video [How To Steal Any Editing Style With AI (properly)](https://youtu.be/wsTL-VyyVIk). Not affiliated with him.
+
 ---
 
 ## How to install and use it (video)
