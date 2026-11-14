@@ -1,0 +1,383 @@
+{
+ "meta": {
+  "style_name": "Narrative Motion (Dark & Light Hybrid Code-Driven Explainer)",
+  "purpose": "Style specification for an AI video editor / Remotion agent: layout, spatial, motion, camera, lighting and audio settings, independent of video topic."
+ },
+ "color_system_and_tokens": {
+  "dark_mode_house_palette": {
+   "canvas_bg_primary_hex": "#16221C",
+   "canvas_bg_median_hex": "#18231C",
+   "outer_bezel_frame_hex": "#060808",
+   "grid_line_css": "rgba(242, 244, 238, 0.045)",
+   "grid_line_major_hex": "#202B24",
+   "grid_line_minor_hex": "#1B261F",
+   "card_surface_primary_hex": "#1A2720",
+   "card_surface_elevated_header_hex": "#1A2820",
+   "card_surface_code_body_hex": "#131A16",
+   "card_surface_deep_recessed_hex": "#101814",
+   "card_border_subtle_css": "1px solid rgba(242, 244, 238, 0.08)",
+   "card_border_dashed_slot_css": "1.5px dashed rgba(122, 230, 168, 0.35)",
+   "card_shadow_css": "0 18px 44px rgba(0,0,0,0.42), 0 2px 6px rgba(0,0,0,0.28)"
+  },
+  "light_mode_house_palette": {
+   "canvas_bg_paper_hex": "#F2F4EE",
+   "grid_line_css": "rgba(22, 34, 28, 0.055)",
+   "card_surface_hex": "#FFFFFF",
+   "ink_primary_hex": "#16221C",
+   "ink_muted_hex": "#5A655E",
+   "accent_green_deep_hex": "#1D7A4C"
+  },
+  "semantic_accent_tokens": {
+   "brand_emerald_bright_hex": "#7AE6A8",
+   "brand_emerald_mid_hex": "#59A67D",
+   "brand_emerald_pill_bg_hex": "#1E3A2B",
+   "warning_amber_pro_hex": "#E7B24A",
+   "error_coral_red_hex": "#E86B60",
+   "error_pill_bg_hex": "#3A1D1B",
+   "ink_primary_offwhite_hex": "#F2F4EE",
+   "ink_secondary_muted_hex": "#8FA196",
+   "ink_caption_dim_hex": "#627369"
+  }
+ },
+ "background_grid_specification": {
+  "type": "Dual-frequency architectural blueprint grid",
+  "major_cell_size_px": 40,
+  "minor_subdivision_size_px": 20,
+  "stroke_width_px": 1,
+  "css_implementation": "background-color: #16221C; background-image: linear-gradient(to right, rgba(242,244,238,0.045) 1px, transparent 1px), linear-gradient(to bottom, rgba(242,244,238,0.045) 1px, transparent 1px); background-size: 40px 40px;"
+ },
+ "typography_system": {
+  "font_families": {
+   "editorial_serif": {
+    "family": "Instrument Serif / Newsreader / Playfair Display",
+    "usage": "Main stage headlines, numbered step titles, emphasis italic keywords (e.g., 'Narrative Motion', 'Step 1')",
+    "weights": [
+     "400 Regular",
+     "400 Italic"
+    ],
+    "tracking_em": -0.02,
+    "line_height": 1.08
+   },
+   "ui_sans": {
+    "family": "Inter / Plus Jakarta Sans / Geist Sans",
+    "usage": "Card titles, UI body copy, bullet lists, progress stepper labels, attribution footers, annotations",
+    "weights": [
+     "400 Regular",
+     "500 Medium",
+     "600 SemiBold"
+    ],
+    "tracking_em": -0.01,
+    "line_height": 1.35
+   },
+   "technical_mono": {
+    "family": "JetBrains Mono / Geist Mono",
+    "usage": "Code editor windows (assets/kit.tsx), uppercase section kickers ('IN THIS VIDEO', 'STEP 1'), typewriter lower-thirds, timestamps",
+    "weights": [
+     "400 Regular",
+     "500 Medium"
+    ],
+    "tracking_em": 0.08,
+    "line_height": 1.45
+   },
+   "dot_matrix_display": {
+    "family": "5x7 LED Matrix / Custom SVG Grid Counter",
+    "usage": "High-impact numeric counters ('1,500+ VIDEOS', '3 FREE TOOLS', '95-98%')",
+    "grid_dot_size_px": 4,
+    "grid_dot_gap_px": 2,
+    "active_color_hex": "#7AE6A8",
+    "inactive_color_css": "rgba(122, 230, 168, 0.12)"
+   }
+  },
+  "type_scale_1080p_px": {
+   "hero_stage_title_serif": 64,
+   "section_header_serif": 48,
+   "inline_aroll_hook_caption_serif": 52,
+   "card_heading_sans": 28,
+   "body_lead_sans": 22,
+   "card_body_sans": 18,
+   "code_editor_mono": 15,
+   "kicker_uppercase_mono": 14,
+   "attribution_footer_sans": 13,
+   "micro_badge_pill_sans": 12
+  },
+  "inline_emphasis_rules": {
+   "rule_1": "Never use ALL-CAPS Impact fonts or heavy black strokes.",
+   "rule_2": "Highlight 1 to 2 pivot words per headline by switching to Italic Serif in #7AE6A8 (mint emerald) or #E86B60 (coral red for negative concepts).",
+   "rule_3": "Pair every major serif headline with a 14px uppercase monospace kicker 12px above it in #8FA196 (or #7AE6A8) with 0.12em letter-spacing."
+  }
+ },
+ "spatial_layout_archetypes": [
+  {
+   "id": "LAYOUT_01_FULL_AROLL",
+   "name": "Full-Bleed Talking Head (A-Roll)",
+   "screen_share_pct": 18.2,
+   "geometry": "1920x1080 full bleed (no 20px dark bezel) OR framed inside 20px bezel just before a slide transition.",
+   "overlays": "Minimalist floating serif keyword caption at y=760px (hook only), corner floating callout ('Which AI?', 'Watch next' at x=1220..1680, y=160..420), or bottom pill CTA ('First link in the description' at x=730..1190, y=735).",
+   "when_to_use": "Hook (00:00-00:04), emotional pivots, personal anecdotes, and final 30s guarantee/outro."
+  },
+  {
+   "id": "LAYOUT_02_CANVAS_PIP_RIGHT",
+   "name": "Primary Remotion Stage + Right Cutout Window",
+   "screen_share_pct": 48.2,
+   "geometry": "Outer 20px bezel (#060808, r=20px). Dark green 40px grid canvas (#16221C). Speaker pinned in right cutout window BOX={x:1657, y:368, w:223, h:344, r:20}. Left graphical stage PLANE={x:60, w:1557, h:1080}.",
+   "overlays": "1 to 3 modular cards, flowcharts, code blocks, or comparison scales inside x=96..1580, y=54..1026.",
+   "when_to_use": "Core explanations, multi-step breakdowns, architecture diagrams, code walk-throughs, and visual proof."
+  },
+  {
+   "id": "LAYOUT_03_SPLIT_LEFT_CANVAS_RIGHT_CAM",
+   "name": "Asymmetric Split: Left Graphic Strip + Right 65% Camera",
+   "screen_share_pct": 5.7,
+   "geometry": "Left dark-green grid panel (x=20..680) with bullet list or chapter title; Right live camera panel (x=680..1900, y=20..1060) with speaker shifted right to x_face=1180.",
+   "overlays": "Stacked bullet points ('Your own footage', 'Your own script', 'TAUGHT ME') or section transitions.",
+   "when_to_use": "Rapid list enumeration where speaker facial expression and hand gestures remain dominant."
+  },
+  {
+   "id": "LAYOUT_04_SPLIT_LEFT_CAM_RIGHT_CANVAS",
+   "name": "Asymmetric Split: Left 52% Camera + Right Graphic Panel",
+   "screen_share_pct": 19.8,
+   "geometry": "Speaker framed on left (x=20..980) or zoomed canvas on left, with 2x2 grid cards ('Your brand: Colors, Studio, Lighting, Voice') on right (x=980..1900).",
+   "overlays": "2x2 modular bento grid or vertical 9:16 phone mockups (w=340px, h=680px, r=36px).",
+   "when_to_use": "Showing brand kits, mobile 9:16 short-form previews, or side-by-side before/after comparisons."
+  },
+  {
+   "id": "LAYOUT_05_VERTICAL_9_16_ADAPTATION",
+   "name": "Short-Form 9:16 Safe-Zone & Bottom Cutout Layout",
+   "screen_share_pct": 8.1,
+   "geometry": "For 1080x1920 vertical output: Speaker window pinned at bottom (x=120..960, y=1280..1720, r=28px) with head masked/peeking 40px above top border; or sliding down off-screen (y -> 1920) when full-screen graphics take over. Safe zone: x=90..920, y=140..1520 (avoids right-side platform icons x=920..1080 and bottom caption bar y=1520..1920).",
+   "overlays": " Light/Dark dot-grid canvas above speaker (y=140..1240).",
+   "when_to_use": "Short-form Reels/Shorts/TikTok adaptations."
+  }
+ ],
+ "animation_and_motion_physics": {
+  "core_timing_constants": {
+   "fps": 30,
+   "join_frames": 4,
+   "join_duration_ms": 133.3,
+   "card_entrance_frames": 10,
+   "card_entrance_duration_ms": 333.3,
+   "connector_arrow_draw_frames": 12,
+   "connector_arrow_draw_ms": 400.0,
+   "counter_roll_frames": 24,
+   "counter_roll_ms": 800.0
+  },
+  "transition_mechanics": {
+   "aroll_to_pip_box_morph": {
+    "duration_frames": 4,
+    "duration_ms": 133.3,
+    "interpolation": "Direct 4-frame cubic-out / critically damped interpolation of viewport rect from [0, 0, 1920, 1080, r=0] to BOX=[1657, 368, 223, 344, r=20] while simultaneously cropping video around FACE=[937, 330] using CROP={cx:0.488, top:0.02, hf:0.82}. Shadow strength k ramps 0 -> 1.",
+    "why_it_works": "4 frames (133ms) is fast enough to feel like an instant cut on a syllable boundary, yet smooth enough that the eye tracks the speaker's face moving to the right cutout window without jarring jump-shock."
+   },
+   "split_panel_slide": {
+    "duration_frames": 5,
+    "duration_ms": 166.7,
+    "easing": "cubic-bezier(0.22, 1, 0.36, 1)",
+    "description": "Camera container x-offset slides from x=20 to x=381 (or x=680) as dark-green grid background reveals underneath."
+   },
+   "diagonal_theme_wipe": {
+    "duration_frames": 14,
+    "duration_ms": 466.7,
+    "angle_deg": 78,
+    "easing": "cubic-bezier(0.65, 0, 0.35, 1)",
+    "description": "Hard angled polygon clip-path wipe switching between Light Mode (#F2F4EE) and Dark Mode (#16221C)."
+   },
+   "micro_punch_in_zoom_on_aroll": {
+    "scale_range": [
+     1.0,
+     1.06
+    ],
+    "anchor_px": [
+     937,
+     330
+    ],
+    "trigger": "Emphasis words during full-screen talking head segments (>3.5s) to mask breath-removal jump cuts."
+   }
+  },
+  "ui_widget_animations": {
+   "dashed_slot_to_card_fill": "Empty rounded container renders first with 1.5px dashed mint border (rgba(122,230,168,0.35)) for 6-10 frames, then solid card (#1A2720) pops in with scale 0.96 -> 1.0 and opacity 0 -> 1 over 8 frames.",
+   "svg_bezier_connector_lines": "1.5px stroke in #7AE6A8 (solid or 4px-4px dashed) animated via stroke-dashoffset from 100% to 0% over 10-12 frames, terminating in a 6px arrowhead or pulsing 8px circle node.",
+   "horizontal_step_progress_bar": "Top-centered stepper (y=68px, x=320..1360) with numbered 24px circles (0, 1, 2, 3, 4). Active step scales to 1.15x in solid #7AE6A8; completed steps swap number for checkmark icon and fill connecting line left-to-right.",
+   "typewriter_cursor_reveal": "Monospace labels ('FREELANCE VIDEO EDITOR', 'Prompting |') reveal character-by-character at 1-2 chars/frame with a solid #7AE6A8 block cursor (w=8px, h=20px) blinking at 2 Hz.",
+   "balance_scale_tilt": "2D vector fulcrums/beams rotate +/- 11 degrees with spring physics (stiffness: 180, damping: 18) when weight cards land on pans."
+  }
+ },
+ "pacing_and_editorial_rhythm": {
+  "visual_change_cadence": {
+   "total_major_layout_state_segments": 140,
+   "average_layout_hold_seconds": 3.91,
+   "micro_visual_event_interval_seconds": 1.65,
+   "micro_visual_events_description": "Even when staying in CANVAS_PIP_RIGHT for 10-20s, a new sub-element (badge, arrow, highlight box, text line, or checkmark) animates on screen every 1.2s to 2.2s synchronized to spoken nouns/verbs.",
+   "max_unbroken_full_aroll_seconds": 7.0,
+   "rule_for_ai_editor": "Never hold a static screen for more than 2.5 seconds. Every spoken clause must trigger either a layout morph (4 frames), a card entrance (8-10 frames), an SVG connector draw (12 frames), or a token highlight pill."
+  }
+ },
+ "audio_engineering_and_sound_design": {
+  "ebur128_and_astats": {
+   "integrated_loudness_lufs": -15.8,
+   "loudness_range_lu": 1.8,
+   "lra_low_lufs": -16.7,
+   "lra_high_lufs": -14.9,
+   "true_peak_dbfs": -3.5,
+   "overall_rms_dbfs": -18.55,
+   "rms_peak_dbfs": -11.83,
+   "noise_floor_dbfs": -78.27,
+   "quietest_5pct_windows_mean_dbfs": -63.74
+  },
+  "background_music_policy": {
+   "bgm_present": false,
+   "bgm_level_dbfs": "None (-infinity / -63.7 dBFS noise floor during speech gaps)",
+   "rationale": "Zero background music is a deliberate signature of this style. By stripping BGM completely and keeping LRA ultra-tight at 1.8 LU, the vocal authority feels intimate, technical, and unhyped, while micro-cuts and Remotion visual snaps create all rhythmic momentum."
+  },
+  "voiceover_processing_chain": {
+   "mic_character": "Close-talk dynamic or small-diaphragm condenser (hyper-dry room, zero reverb tail)",
+   "high_pass_filter": "85 Hz, 18 dB/octave (removes plosives and sub-rumble)",
+   "eq_profile": "Subtle -2.5 dB cut at 280 Hz (boxiness removal), +2.0 dB presence shelf at 4.5 kHz, de-esser at 6.8 kHz",
+   "compression": "Fast FET-style leveling (4:1 ratio, 5ms attack, 60ms release, ~6 dB gain reduction) + brickwall true-peak limiter at -3.5 dBFS to achieve an ultra-consistent 1.8 LU loudness range",
+   "breath_and_pause_cutting": {
+    "micro_pause_count_example": 620,
+    "median_pause_duration_ms": 70.0,
+    "mean_pause_duration_ms": 82.4,
+    "interquartile_range_ms": [
+     50.0,
+     90.0
+    ],
+    "p95_section_break_pause_ms": 190.0,
+    "rule": "Strip 95% of inhalations via automated silence cutting (FFmpeg/Python threshold -42 dBFS), leaving tight 50-90ms gaps between clauses and 133ms (4 frames = JOIN_FRAMES) at section joins."
+   }
+  },
+  "sfx_palette_and_mixing": {
+   "sfx_usage_philosophy": "Ultra-minimalist, nearly subliminal tactile UI foley. Zero cartoon boings, zero loud cinematic risers, zero bass booms.",
+   "sfx_cues": [
+    {
+     "cue_type": "Soft Low-Pass Air Whoosh",
+     "trigger": "4-frame A-Roll <-> PiP Box morph or diagonal theme wipe",
+     "peak_level_dbfs": -28.0,
+     "duration_ms": 140,
+     "frequency_center_hz": 450
+    },
+    {
+     "cue_type": "Muted Mechanical Tactile Tick / Pop",
+     "trigger": "Card appearance, badge pop-in, or checkmark completion",
+     "peak_level_dbfs": -30.0,
+     "duration_ms": 45,
+     "frequency_center_hz": 1800
+    },
+    {
+     "cue_type": "Subtle Keystroke / Paper Brush",
+     "trigger": "Typewriter text reveal or SVG connector line draw",
+     "peak_level_dbfs": -34.0,
+     "duration_ms": 30,
+     "frequency_center_hz": 3200
+    }
+   ]
+  }
+ },
+ "live_camera_and_lighting_setup": {
+  "camera_and_optics": {
+   "framing": "Medium Close-Up (MCU), chest-up centered at x=937px, eye-line at y=330px (30.5% from top of frame)",
+   "focal_length_equivalent": "35mm to 50mm full-frame equivalent at f/1.8 - f/2.2 (shallow depth of field softly blurring background plants and canvas art without obliterating their shapes)",
+   "camera_angle": "Dead-level eye-height tripod lock-off, zero handheld shake"
+  },
+  "three_point_plus_practical_lighting_plan": {
+   "key_light": {
+    "position": "Camera-Right (Viewer's Right) at 35 deg horizontal, 25 deg elevation",
+    "modifier": "Large diffused octabox or lantern softbox",
+    "color_temp_k": 5400,
+    "skin_ire": "64.2% IRE on viewer-right cheek (#DD958E), 72.0% IRE on forehead highlight (#E4AD9F)"
+   },
+   "fill_and_negative_fill": {
+    "position": "Camera-Left (Viewer's Left)",
+    "modifier": "Passive ambient bounce + partial negative fill to maintain dimensional modeling",
+    "skin_ire": "50.1% IRE on viewer-left cheek (#A3776D), 47.3% IRE neck shadow (#927367)",
+    "key_to_fill_contrast_ratio": "1.28:1 in luma (~0.65 stops soft editorial contrast)"
+   },
+   "background_accent_practical": {
+    "position": "Back-Right corner behind snake plant (x=1780..1910)",
+    "fixture": "Vertical RGB tube light or warm sunset projection lamp",
+    "color_hex": "#E05A47 (Warm Coral / Sunset Red-Orange)",
+    "wall_wash": "#A07677 at 49.8% IRE on right wall vs #21361F at 18.8% IRE on shadowed left wall"
+   }
+  },
+  "set_design_and_wardrobe": {
+   "background_left": "Tall leafy green indoor bamboo/palm plant (#1B2C20, 15.5% IRE) framing left edge",
+   "background_center": "Muted abstract horizontal landscape canvas painting (#656F6A, 42.6% IRE) hung behind speaker's head/shoulders",
+   "background_right": "Structured snake plant (Sansevieria, #26281E) in front of warm coral-red wall wash",
+   "wardrobe": "Warm tan/sand textured windowpane-plaid button-down shirt (#6D5E4A, 37.5% IRE) harmonizing with warm skin tones and contrasting against the dark green Remotion UI"
+  }
+ },
+ "layout_and_packaging": {
+  "layer_1_shot_origins": {
+   "live_camera_a_roll_share_pct": 18.2,
+   "remotion_canvas_with_pip_box_share_pct": 48.2,
+   "split_screen_hybrid_share_pct": 25.5,
+   "framed_camera_or_light_mode_share_pct": 8.1,
+   "ai_generated_video_share_pct": 0.0,
+   "verdict": "100% Hybrid of single-camera Live Studio A-Roll + Deterministic Code/Remotion Canvas (React/TSX + HTML5 Canvas + CSS Grid). Zero generative AI video pixels are used in the final timeline; third-party clips and UI captures are embedded inside rounded Remotion cards."
+  },
+  "layer_2_overlays_and_packaging": {
+   "outer_viewport_bezel": {
+    "enabled_in_canvas_and_split_modes": true,
+    "disabled_in_full_bleed_a_roll": true,
+    "thickness_px": {
+     "top": 20,
+     "bottom": 20,
+     "left": 20,
+     "right": 20
+    },
+    "inner_viewport_rect_px": {
+     "x": 20,
+     "y": 20,
+     "w": 1880,
+     "h": 1040
+    },
+    "inner_corner_radius_px": 20,
+    "bezel_color_hex": "#060808"
+   },
+   "floating_pip_speaker_box": {
+    "constant_name": "BOX",
+    "x_px": 1657,
+    "y_px": 368,
+    "width_px": 223,
+    "height_px": 344,
+    "border_radius_px": 20,
+    "center_px": [
+     1768.5,
+     540.0
+    ],
+    "aspect_ratio": "0.648 (Vertical portrait cutout)",
+    "source_crop_mapping": {
+     "constant_name": "CROP",
+     "center_x_normalized": 0.488,
+     "top_y_normalized": 0.02,
+     "height_fraction_normalized": 0.82,
+     "face_anchor_px": [
+      937,
+      330
+     ]
+    },
+    "box_shadow_css": "0 1px 2px rgba(0,0,0,0.35), 0 10px 24px rgba(0,0,0,0.45), 0 26px 60px rgba(0,0,0,0.55), 0 0 0 1px rgba(242,244,238,0.08)",
+    "dynamic_shadow_interpolation": "boxShadow(k) scales alpha by k in [0..1] during 4-frame zoom transitions so shadow fades smoothly to 0 at full-screen."
+   },
+   "graphics_stage_plane": {
+    "constant_name": "PLANE",
+    "x_px": 60,
+    "width_px": 1557,
+    "height_px": 1080,
+    "zone_divider_x_px": 1617,
+    "optical_center_offset_px": 121,
+    "safe_zone_bounds_px": {
+     "constant_name": "SAFE",
+     "x0": 96,
+     "x1": 1824,
+     "y0": 54,
+     "y1": 1026
+    }
+   }
+  }
+ },
+ "ai_generation_prompts": {
+  "note": "Use these prompts if your pipeline generates synthetic presenter footage, B-roll inserts, or visual style frames via Google Flow / Veo / Seedance / Midjourney.",
+  "a_roll_presenter_image_prompt": "Medium close-up studio portrait of a charismatic 26-year-old creator speaking directly into the lens, wearing a textured tan plaid button-down shirt, centered at eye level. Soft 5400K key light from camera-right creating gentle 1.3:1 dimensional modeling on skin, dark neutral wall behind with a muted abstract coastal canvas painting in the center, lush green indoor palm foliage on the left, a structured snake plant on the right illuminated by a warm coral-red RGB practical tube light glow on the right wall. Shot on Sony FX3, 35mm f/1.8 lens, shallow depth of field, clean natural skin texture, editorial tech YouTuber aesthetic, 16:9.",
+  "a_roll_video_motion_prompt": "Locked-off tripod medium close-up shot. The presenter speaks articulately and energetically to the camera with natural expressive hand gestures at chest height, subtle head nods on emphasis words, natural eye contact, soft studio key lighting from the right and warm coral-red accent glow on the right background wall.",
+  "ui_b_roll_style_frame_prompt": "Flat 2D vector motion graphics UI board on a deep forest-green architectural grid background (#16221C with subtle 40px faint off-white grid lines), featuring dark matte slate-green rounded cards (#1A2720, 16px border radius, soft drop shadow), crisp off-white editorial serif headlines paired with glowing mint-emerald italic keywords (#7AE6A8), clean thin 1.5px mint-green curved connector arrows, and a vertical rounded picture-in-picture presenter cutout window pinned on the far right edge, minimalist modern SaaS explainer aesthetic."
+ }
+}
