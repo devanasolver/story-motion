@@ -8,6 +8,16 @@ Free and open source. Works with Claude Code, Codex, Gemini CLI, Cursor, Antigra
 
 ---
 
+## What the style looks like
+
+A 30-second example of a video made in the Narrative Motion style:
+
+<video src="https://raw.githubusercontent.com/devanasolver/narrative-motion/main/examples/narrative-motion-example.mp4" controls muted playsinline width="640"></video>
+
+[Watch the example video](examples/narrative-motion-example.mp4)
+
+---
+
 ## What is a "skill"?
 
 A skill is a folder with a `SKILL.md` file. It is a recipe written for an AI coding agent. You do not run it yourself. You install the folder, then tell your agent what video you want, and the agent follows the recipe.
