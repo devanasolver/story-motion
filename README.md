@@ -20,6 +20,16 @@ Made by Anas. More on YouTube: **[Anas | Build Online](https://www.youtube.com/@
 
 ---
 
+## How to install and use it (video)
+
+A 20-second walkthrough: open the skill folder on GitHub, open `SKILL.md`, copy the raw file into your agent's skills folder.
+
+[![How to install the skill - click to play](assets/tutorial-preview.gif)](https://devanasolver.github.io/narrative-motion/#tutorial)
+
+**[Play the how-to video](https://devanasolver.github.io/narrative-motion/#tutorial)** (plays in the browser, no download)
+
+---
+
 ## What is a "skill"?
 
 A skill is a folder with a `SKILL.md` file. It is a recipe written for an AI coding agent. You do not run it yourself. You install the folder, then tell your agent what video you want, and the agent follows the recipe.
