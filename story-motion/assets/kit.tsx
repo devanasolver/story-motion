@@ -1,7 +1,7 @@
 import React from 'react';
 
 // ============================================================================
-// NARRATIVE MOTION REMOTION KIT (kit.tsx)
+// STORY MOTION REMOTION KIT (kit.tsx)
 // Deterministic 1920x1080 @ 30fps tokens and layout primitives
 // ============================================================================
 

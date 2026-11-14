@@ -1,14 +1,14 @@
 ---
-name: narrative-motion
-description: Direct, edit, and code videos in the Narrative Motion style using Remotion, React/TypeScript, FFmpeg, and live or AI A-roll. Use whenever the user mentions Narrative Motion, wants to edit a talking-head video with a right-side cutout PiP box and dark or light architectural grid canvas, asks for 4-frame camera-to-canvas morphs, or wants a code-driven explainer video with editorial serif plus mint-emerald typography and -15.8 LUFS zero-BGM audio.
+name: story-motion
+description: Direct, edit, and code videos in the Story Motion style using Remotion, React/TypeScript, FFmpeg, and live or AI A-roll. Use whenever the user mentions Story Motion, wants to edit a talking-head video with a right-side cutout PiP box and dark or light architectural grid canvas, asks for 4-frame camera-to-canvas morphs, or wants a code-driven explainer video with editorial serif plus mint-emerald typography and -15.8 LUFS zero-BGM audio.
 ---
-# narrative-motion
+# story-motion
 
-Build and edit high-retention, code-driven explainer videos in the exact Narrative Motion house style. This skill combines a continuous talking-head master track with a deterministic Remotion/React canvas (`assets/kit.tsx` and `references/style_spec.json`), 4-frame spatial morphs, a 4-font editorial hierarchy, and a hyper-dry `-15.8 LUFS` zero-music audio pipeline.
+Build and edit high-retention, code-driven explainer videos in the exact Story Motion house style. This skill combines a continuous talking-head master track with a deterministic Remotion/React canvas (`assets/kit.tsx` and `references/style_spec.json`), 4-frame spatial morphs, a 4-font editorial hierarchy, and a hyper-dry `-15.8 LUFS` zero-music audio pipeline.
 
 ## When to Use
 
-- The user asks to edit or produce a long-form (16:9) or short-form (9:16) video in the Narrative Motion style.
+- The user asks to edit or produce a long-form (16:9) or short-form (9:16) video in the Story Motion style.
 - The user wants their talking-head A-roll to morph smoothly between full-screen, asymmetric split-screen, and a pinned right-side cutout window while code-driven diagrams animate on a dark-green or paper-light architectural grid.
 - The user wants an AI coding agent (Claude Code, Codex, Antigravity) to generate Remotion scenes, FFmpeg silence-cutting scripts, live lighting setups, or AI B-roll prompts matching the exact production settings.
 

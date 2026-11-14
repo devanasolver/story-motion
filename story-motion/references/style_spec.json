@@ -1,6 +1,6 @@
 {
  "meta": {
-  "style_name": "Narrative Motion (Dark & Light Hybrid Code-Driven Explainer)",
+  "style_name": "Story Motion (Dark & Light Hybrid Code-Driven Explainer)",
   "purpose": "Style specification for an AI video editor / Remotion agent: layout, spatial, motion, camera, lighting and audio settings, independent of video topic."
  },
  "color_system_and_tokens": {
@@ -50,7 +50,7 @@
   "font_families": {
    "editorial_serif": {
     "family": "Instrument Serif / Newsreader / Playfair Display",
-    "usage": "Main stage headlines, numbered step titles, emphasis italic keywords (e.g., 'Narrative Motion', 'Step 1')",
+    "usage": "Main stage headlines, numbered step titles, emphasis italic keywords (e.g., 'Story Motion', 'Step 1')",
     "weights": [
      "400 Regular",
      "400 Italic"
