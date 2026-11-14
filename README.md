@@ -12,9 +12,11 @@ Free and open source. Works with Claude Code, Codex, Gemini CLI, Cursor, Antigra
 
 A 30-second example of a video made in the Narrative Motion style:
 
-<video src="https://raw.githubusercontent.com/devanasolver/narrative-motion/main/examples/narrative-motion-example.mp4" controls muted playsinline width="640"></video>
+[![Narrative Motion example video - click to play](assets/preview.gif)](https://devanasolver.github.io/narrative-motion/)
 
-[Watch the example video](examples/narrative-motion-example.mp4)
+**[Play the full 30-second video](https://devanasolver.github.io/narrative-motion/)** (plays in the browser, no download)
+
+Made by Anas. More on YouTube: **[Anas | Build Online](https://www.youtube.com/@anasstyb)**
 
 ---
 
